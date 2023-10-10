@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: auth-postgres
+    environment:
+      POSTGRES_DB: auth_db
+      POSTGRES_USER: kot_obormot
+      POSTGRES_PASSWORD: wv9wEr!5tr0nG(g
+    ports:
+      - "5454:5432"
+    volumes:
+      - postgres_auth_data:/var/lib/postgresql/auth_data
+volumes:
+  postgres_auth_data:
